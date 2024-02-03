@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "import-helpers",
+    "eslint-plugin-import-helpers",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "@typescript-eslint/semi": [2, "always"],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "arrow-body-style": ["error"],
+    "@typescript-eslint/no-namespace": "off",
+    "import-helpers/order-imports": [
+      "error",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "module",
+          "/^@/config/",
+          "/^@/routes/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ]
+  },
+  "ignorePatterns": ["jest.config.js"]
+}
