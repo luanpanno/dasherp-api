@@ -27,6 +27,7 @@
         "groups": [
           "module",
           "/^@/config/",
+          "/^@/domain/",
           "/^@/routes/",
           ["parent", "sibling", "index"]
         ],
