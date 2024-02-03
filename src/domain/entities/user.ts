@@ -26,3 +26,18 @@ export class PgUser {
   @UpdateDateColumn()
   updatedAt!: Date;
 }
+
+export type User = {
+  id: number;
+  name: string;
+  email: string;
+  password: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type CreateUserDto = {
+  name: string;
+  email: string;
+  password: string;
+};

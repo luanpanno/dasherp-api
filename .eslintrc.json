@@ -28,6 +28,8 @@
           "module",
           "/^@/config/",
           "/^@/domain/",
+          "/^@/services/",
+          "/^@/controllers/",
           "/^@/routes/",
           ["parent", "sibling", "index"]
         ],
